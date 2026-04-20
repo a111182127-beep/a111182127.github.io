@@ -3,46 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陳畹情 Panda | 海洋系個人履歷</title>
+    <title>陳畹情 Panda | 線上履歷</title>
     <style>
-        :root { --deep-ocean: #003366; --wave-blue: #0077be; --foam-white: #f0f8ff; }
-        body { font-family: 'Microsoft JhengHei', sans-serif; line-height: 1.8; color: #333; margin: 0; background: linear-gradient(180deg, #e0f2f1 0%, #ffffff 100%); background-attachment: fixed; }
-        header { background: linear-gradient(135deg, var(--deep-ocean), var(--wave-blue)); color: white; text-align: center; padding: 60px 20px; clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); margin-bottom: 30px; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        .section-box { background: rgba(255, 255, 255, 0.9); padding: 25px; border-radius: 15px; border-left: 8px solid var(--wave-blue); box-shadow: 0 10px 20px rgba(0,0,0,0.05); margin-bottom: 25px; transition: 0.3s; }
-        .section-box:hover { transform: translateY(-5px); }
-        h2 { color: var(--deep-ocean); margin-top: 0; }
-        .link-group { display: flex; flex-wrap: wrap; gap: 10px; }
-        .project-link { background: var(--wave-blue); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 0.9em; }
-        .project-link:hover { background: var(--deep-ocean); }
+        /* 海洋風色調與基本設定 */
+        :root {
+            --deep-ocean: #003366;
+            --wave-blue: #0077be;
+            --light-blue: #e3f2fd;
+            --bg-color: #f4f9f9;
+        }
+        body { font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; color: #333; margin: 0; background-color: var(--bg-color); scroll-behavior: smooth; }
+        
+        /* 頂部固定導覽列 */
+        nav { background-color: var(--deep-ocean); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; flex-wrap: wrap; padding: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        nav a { color: white; text-decoration: none; padding: 10px 15px; margin: 5px; border-radius: 5px; transition: 0.3s; font-size: 0.9em; }
+        nav a:hover { background-color: var(--wave-blue); }
+
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        
+        /* 區塊通用樣式 */
+        .section-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 40px; }
+        .section-title { color: var(--deep-ocean); border-bottom: 3px solid var(--wave-blue); padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; display: flex; align-items: center; }
+        .section-title::before { content: '⚓'; margin-right: 10px; font-size: 1.2em; }
+        
+        /* 個人資料區塊 */
+        .profile-header { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 20px; }
+        .profile-img-placeholder { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 5px solid var(--light-blue); }
+        .profile-info h1 { margin: 0; color: var(--deep-ocean); font-size: 2.5em; }
+        .profile-info h3 { margin: 5px 0 15px 0; color: var(--wave-blue); }
+        .social-links a { margin-right: 10px; color: var(--wave-blue); text-decoration: none; font-weight: bold; }
+        .social-links a:hover { text-decoration: underline; }
+        
+        /* 雙欄排版 */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+        
+        /* 按鈕與列表 */
+        .btn { display: inline-block; background: var(--wave-blue); color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; transition: 0.3s; font-size: 0.9em; margin-top: 10px; margin-right: 10px; }
+        .btn:hover { background: var(--deep-ocean); }
+        ul { padding-left: 20px; }
+        
+        /* 媒體卡片 (預留照片位置) */
+        .media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; }
+        .media-card { background: var(--light-blue); padding: 15px; border-radius: 10px; text-align: center; }
+        .media-card img { width: 100%; height: 120px; object-fit: cover; border-radius: 5px; margin-bottom: 10px; }
+        
+        footer { text-align: center; padding: 40px; background: var(--deep-ocean); color: white; font-size: 0.9em; line-height: 2; }
+        footer a { color: var(--light-blue); text-decoration: none; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>陳畹情 (Panda)</h1>
-        <p>國立高雄科技大學 航海科 | 探索未知的行銷航海家</p>
-    </header>
+
+    <nav>
+        <a href="#home">首頁</a>
+        <a href="#0309">0309旅遊規劃作業</a>
+        <a href="#0316">0316旅遊規畫簡報作業</a>
+        <a href="#0323">0323 AI簡報</a>
+        <a href="#0330">0330 AI旅遊影片</a>
+        <a href="#0413">0413公仔</a>
+    </nav>
+
     <div class="container">
-        <div class="section-box">
-            <h2>⚓ 關於我的航線</h2>
-            <p>您好，我是熊貓！我對世界充滿好奇心，熱愛與人交流。身為航海科學生，我學會了在變幻莫測的大海中尋找方向，並將這份韌性帶入我的行銷創意中。</p>
-            <p>📧 Email: A111182127@nkust.edu.tw</p>
-        </div>
-        <div class="section-box">
-            <h2>⚓ 專業技能</h2>
-            <ul>
-                <li>航海技術：六分儀觀測、航海曆運用、四小證</li>
-                <li>數位能力：Google Workspace、Office、AI 應用</li>
-            </ul>
-        </div>
-        <div class="section-box">
-            <h2>⚓ 數位作品集</h2>
-            <div class="link-group">
-                <a href="https://drive.google.com/open?id=1qv4ccJ5Is7mo8AQKFPR14nXZGvkE0ktgptC1TqjZ61w" class="project-link" target="_blank">📄 旅遊企劃</a>
-                <a href="https://drive.google.com/open?id=1kt1a4tMF4NnPvf311MxXHqb7DknpMP7m" class="project-link" target="_blank">🎬 AI 影片作品</a>
-                <a href="https://studio.tripo3d.ai/3d-model/4567815c-9ab9-40fc-8a44-f22ae8d4fbd6" class="project-link" target="_blank">🧱 3D 公仔展示</a>
+
+        <div id="home" class="section-box">
+            <div class="profile-header">
+                <img src="IMG_2186.jpg" alt="陳畹情的大頭照" class="profile-img-placeholder">
+                <div class="profile-info">
+                    <h1>陳畹情</h1>
+                    <h3>處女座｜B型｜2006-09-16</h3>
+                    <p>📧 Email: A111182127@nkust.edu.tw<br>
+                    📞 Tel: 0903557921</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                        <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                        <a href="https://twitter.com/" target="_blank">Twitter</a>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="section-box grid-2">
+            <div>
+                <h2 class="section-title">旅遊經驗</h2>
+                <ul>
+                    <li><strong>2025-07 台灣新竹：</strong>新竹也被稱為風城，風真的很大，騎車會被吹歪。城隍廟美食周邊小吃超集中，像是貢丸、米粉或是肉圓。新竹科學園區是台灣半導體核心基地；新竹東門城是全台少數保存完整的城門，有一種古城歷史感。</li>
+                    <li><strong>2024-08 台灣花蓮：</strong>太魯閣國家公園大理石峽谷景觀世界級，清水斷崖超壯觀。在地小吃如手工現包麻糬、炸彈蔥油餅或是花蓮版餛飩（扁食）。星空與自然環境純淨光害少。</li>
+                    <li><strong>2019-07 台灣嘉義：</strong>阿里山林業文化（如森林鐵路）。火雞肉飯發源地（如噴水雞肉飯）。文青文藝感濃厚（如檜意森活村）。東石、布袋海味文化。</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="section-title">學歷與語言能力</h2>
+                <p><strong>🎓 學歷：</strong><br>
+                2022-09 ~ 2027-06<br>
+                國立高雄科技大學五專部︙航海科︙副學士</p>
+                <p><strong>🗣️ 語言能力：</strong><br>
+                英文 (普通)｜中文 (精通 / 母語)｜台語 (普通)</p>
+            </div>
+        </div>
+
+        <div class="section-box grid-2">
+            <div>
+                <h2 class="section-title">專業技能 & 證照</h2>
+                <p><strong>溝通與行政能力：</strong>資料整理、會議記錄、對外聯繫、與人應對</p>
+                <p><strong>網路與文書能力：</strong>Google系統、Powerpoint簡報製作、Excel資料整理/基本函數、Word製作</p>
+                <p><strong>航海相關技能：</strong>六分儀觀測計算、航海曆使用、海圖判讀、航行計畫擬定</p>
+                <p><strong>專業證照 (航海)：</strong>基本安全訓練證書（四小證）、保全職責、保全意識</p>
+            </div>
+            <div>
+                <h2 class="section-title">電腦技能</h2>
+                <p><strong>辦公應用軟體：</strong><br>
+                Microsoft Office：Word、Excel、Powerpoint<br>
+                Google Workspace：Gmail、Meet</p>
+                <p><strong>課程應用軟體：</strong><br>
+                Zuvio、YouTube、教學平台</p>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h2 class="section-title">自傳</h2>
+            <p>我的名字叫陳畹情，我於民國95年9月16日出生在高雄岡山。</p>
+            <p>我從小就很喜歡海洋，對大海有著許多好奇心，於是在國中畢業時看到高雄科技大學航海科的招生廣告，我就決定要來探索看看。主要是我也想要跳脫舒適圈到陌生的環境生活，讓自己的眼界可以更加寬廣、使自身的想法成長。過程雖然辛苦，不過時間一轉眼也已經四年了，距離畢業即將到來，真的比想像中還要更快。</p>
+            <p>不過，其實我很想進入下一階段，因為我對未來充滿想像，所以很想趕快去探索。到現在，我仍然對海洋充滿熱情與好奇，因為大海實在是太神秘了，感覺就算花了很多時間也無法得知他的真面目，所以他的奧秘，是可以讓我一直保持對大海興致高昂的其中一點。</p>
+            <p>我認為我是個好奇心很強的人，所以海洋的神秘莫測讓人非常的有興趣，這種力量可以支撐我繼續走下去。我希望未來我能帶著熱情與活力去追尋夢想與目標並且不失去自我，然後可以舒服自在的享受生活，做自己喜歡的事。</p>
+        </div>
+
+        <div id="0309" class="section-box">
+            <h2 class="section-title">0309 旅遊規劃作業</h2>
+            <p>嘉南四天三夜旅遊企劃</p>
+            <img src="https://via.placeholder.com/600x250.png?text=放入0309旅遊規劃截圖" alt="0309旅遊規劃" style="width:100%; border-radius:10px;">
+            <a href="https://docs.google.com/spreadsheets/d/12xOZfWy7ldSt7jFnzCCh8LKUDenRL_bhcDxyEzS4i9g/edit?gid=973686312#gid=973686312" class="btn" target="_blank">📄 Google 試算表</a>
+            <a href="https://drive.google.com/open?id=12xOZfWy7ldSt7jFnzCCh8LKUDenRL_bhcDxyEzS4i9g" class="btn" target="_blank">📁 雲端硬碟檔案</a>
+        </div>
+
+        <div id="0316" class="section-box">
+            <h2 class="section-title">0316 旅遊規畫簡報作業</h2>
+            <p>嘉南平原四天三夜家庭旅遊 2026 清明連假 (4/3-4/6)</p>
+            <img src="https://via.placeholder.com/600x250.png?text=放入0316簡報截圖" alt="0316旅遊規畫簡報" style="width:100%; border-radius:10px;">
+            <a href="https://docs.google.com/presentation/d/1qv4ccJ5Is7mo8AQKFPR14nXZGvkE0ktgptC1TqjZ61w/edit?slide=id.SLIDES_API160516882_0#slide=id.SLIDES_API160516882_0" class="btn" target="_blank">📊 Google 簡報</a>
+            <a href="https://drive.google.com/open?id=1qv4ccJ5Is7mo8AQKFPR14nXZGvkE0ktgptC1TqjZ61w" class="btn" target="_blank">📁 雲端硬碟檔案</a>
+        </div>
+
+        <div id="0323" class="section-box">
+            <h2 class="section-title">0323 AI簡報</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Notebook+LM+預覽" alt="Notebook LM">
+                    <h4>Notebook LM</h4>
+                    <a href="https://drive.google.com/open?id=1hvSYL0B2wmgK8T8D-GM3mq6v_26v8wsI" class="btn" target="_blank">開啟 PDF</a>
+                </div>
+                <div class="media-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Manus+預覽" alt="Manus">
+                    <h4>Manus</h4>
+                    <a href="https://drive.google.com/open?id=1ZQx_lSaCnqjTJby8Yt0dG_RTvVT-HKyF" class="btn" target="_blank">開啟 PDF</a>
+                </div>
+                <div class="media-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Gamma+預覽" alt="Gamma">
+                    <h4>Gamma</h4>
+                    <a href="https://drive.google.com/open?id=1O4b55k7oRKVg9Uql5QO0q2ys4-z_RTBh" class="btn" target="_blank">開啟 PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="0330" class="section-box">
+            <h2 class="section-title">0330 AI旅遊影片</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=第一天" alt="第一天">
+                    <h4>第一天</h4>
+                    <a href="https://drive.google.com/open?id=1xRp4DZe5eCqibbw07VXefHXZKj7x3p2P" class="btn" target="_blank">觀看影片</a>
+                </div>
+                <div class="media-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=第二天" alt="第二天">
+                    <h4>第二天</h4>
+                    <a href="https://drive.google.com/open?id=154vWpceUZnA-l6R-tbdgm7GODkirx4nd" class="btn" target="_blank">觀看影片</a>
+                </div>
+                <div class="media-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=第三天" alt="第三天">
+                    <h4>第三天</h4>
+                    <a href="https://drive.google.com/open?id=1vMtY82ohdFun8qo535uwd27DDzs2VU-b" class="btn" target="_blank">觀看影片</a>
+                </div>
+                <div class="media-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=第四天" alt="第四天">
+                    <h4>第四天</h4>
+                    <a href="https://drive.google.com/open?id=1SGz_nnbcPqSm0VhGGrJWVqaXff0Ws0zb" class="btn" target="_blank">觀看影片</a>
+                </div>
+                <div class="media-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=全部綜合" alt="全部綜合">
+                    <h4>全部綜合</h4>
+                    <a href="https://drive.google.com/open?id=1kt1a4tMF4NnPvf311MxXHqb7DknpMP7m" class="btn" target="_blank">觀看影片</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="0413" class="section-box">
+            <h2 class="section-title">0413 公仔</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=個人公仔" alt="個人公仔">
+                    <h4>個人公仔</h4>
+                    <a href="https://studio.tripo3d.ai/3d-model/4567815c-9ab9-40fc-8a44-f22ae8d4fbd6?invite_code=3ALFGC" class="btn" target="_blank">查看模型</a>
+                </div>
+                <div class="media-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=雙人公仔" alt="和朋友的雙人公仔">
+                    <h4>和朋友的雙人公仔</h4>
+                    <a href="https://studio.tripo3d.ai/3d-model/4c982881-dcfe-4098-8f4f-53d963b60116?invite_code=3ALFGC" class="btn" target="_blank">查看模型</a>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <footer>
+        <p>與我聯絡 Tel: 0903557921</p>
+        <p>
+            範本模板｜<a href="https://youtube.com/@ruosuoasu-class" target="_blank">youtube.com/@ruosuoasu-class</a><br>
+            履歷內容｜<a href="https://www.yourator.co" target="_blank">www.yourator.co</a><br>
+            背景圖｜<a href="https://www.freepik.com" target="_blank">www.freepik.com</a>
+        </p>
+        <p>&copy; 2026 陳畹情 (Panda). All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
