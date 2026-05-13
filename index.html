@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陳畹情 Panda | 線上作品集</title>
     <style>
-        /* 海洋風色調與基本設定 */
         :root {
             --deep-ocean: #003366;
             --wave-blue: #0077be;
@@ -14,46 +13,26 @@
         }
         body { font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; color: #333; margin: 0; background-color: var(--bg-color); scroll-behavior: smooth; }
         
-        /* 頂部固定導覽列 */
         nav { background-color: var(--deep-ocean); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; flex-wrap: wrap; padding: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        nav a { color: white; text-decoration: none; padding: 10px 15px; margin: 5px; border-radius: 5px; transition: 0.3s; font-size: 0.9em; }
+        nav a { color: white; text-decoration: none; padding: 10px 15px; margin: 5px; border-radius: 5px; transition: 0.3s; font-size: 0.85em; }
         nav a:hover { background-color: var(--wave-blue); }
 
         .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-        
-        /* 區塊通用樣式 */
         .section-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 40px; }
         .section-title { color: var(--deep-ocean); border-bottom: 3px solid var(--wave-blue); padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; display: flex; align-items: center; }
-        .section-title::before { content: '⚓'; margin-right: 10px; font-size: 1.2em; }
+        .section-title::before { content: '⚓'; margin-right: 10px; }
         
-        /* 內嵌框架容器樣式 */
-        .embed-wrapper { 
-            position: relative; 
-            width: 100%; 
-            height: 600px; /* 視窗高度 */
-            background: #eee; 
-            border-radius: 10px; 
-            overflow: hidden; 
-            border: 2px solid var(--light-blue);
-            margin-bottom: 20px;
-        }
+        /* 內容顯示視窗樣式 */
+        .embed-wrapper { position: relative; width: 100%; height: 550px; background: #fff; border-radius: 10px; overflow: hidden; border: 2px solid var(--light-blue); margin: 15px 0; }
         iframe { width: 100%; height: 100%; border: none; }
-
-        /* 個人資料區塊 */
-        .profile-header { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 20px; }
-        .profile-img-placeholder { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 5px solid var(--light-blue); }
-        .profile-info h1 { margin: 0; color: var(--deep-ocean); font-size: 2.5em; }
-        .profile-info h3 { margin: 5px 0 15px 0; color: var(--wave-blue); }
-        .social-links a { margin-right: 10px; color: var(--wave-blue); text-decoration: none; font-weight: bold; }
         
-        /* 雙欄排版 */
+        .profile-header { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
+        .profile-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 5px solid var(--light-blue); }
+        
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { 
-            .grid-2 { grid-template-columns: 1fr; } 
-            .embed-wrapper { height: 400px; } /* 手機版高度縮小 */
-        }
+        .btn { display: inline-block; background: var(--wave-blue); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 5px 0; }
         
-        footer { text-align: center; padding: 40px; background: var(--deep-ocean); color: white; font-size: 0.9em; line-height: 2; }
+        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } .embed-wrapper { height: 350px; } }
     </style>
 </head>
 <body>
@@ -62,93 +41,103 @@
         <a href="#home">首頁</a>
         <a href="#0309">旅遊試算表</a>
         <a href="#0316">旅遊簡報</a>
-        <a href="#0323">AI作品集</a>
-        <a href="#0330">AI旅遊影片</a>
-        <a href="#0413">3D公仔</a>
+        <a href="#0323">AI 簡報(多份)</a>
+        <a href="#0330">AI 影片(全)</a>
+        <a href="#0413">3D 公仔</a>
     </nav>
 
     <div class="container">
 
         <div id="home" class="section-box">
             <div class="profile-header">
-                <img src="IMG_2186.jpg" alt="陳畹情" class="profile-img-placeholder">
+                <img src="IMG_2186.jpg" alt="陳畹情" class="profile-img">
                 <div class="profile-info">
-                    <h1>陳畹情</h1>
-                    <h3>處女座｜B型｜2006-09-16</h3>
-                    <p>📧 Email: A111182127@nkust.edu.tw<br>
-                    📞 Tel: 0903557921</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-                        <a href="https://www.youtube.com" target="_blank">YouTube</a>
-                        <a href="https://www.facebook.com" target="_blank">Facebook</a>
-                    </div>
+                    <h1>陳畹情 Panda</h1>
+                    <p>📍 高科大 航海科 | A111182127<br>📧 A111182127@nkust.edu.tw</p>
                 </div>
             </div>
         </div>
 
-        <div class="grid-2">
-            <div class="section-box">
-                <h2 class="section-title">旅遊經驗</h2>
-                <ul>
-                    <li><strong>2025 新竹：</strong>探索風城美食與科學園區。</li>
-                    <li><strong>2024 花蓮：</strong>太魯閣與清水斷崖壯觀景致。</li>
-                    <li><strong>2019 嘉義：</strong>阿里山森林鐵路與火雞肉飯。</li>
-                </ul>
-            </div>
-            <div class="section-box">
-                <h2 class="section-title">學歷能力</h2>
-                <p><strong>🎓 國立高雄科技大學</strong><br>航海科 (2022-2027)</p>
-                <p><strong>🗣️ 語言能力：</strong><br>中文 (精通)｜英文 (普通)｜台語 (普通)</p>
-            </div>
-        </div>
-
         <div id="0309" class="section-box">
-            <h2 class="section-title">0309 旅遊規劃試算表</h2>
-            <p>嘉南四天三夜旅遊企劃內容：</p>
+            <h2 class="section-title">0309 旅遊規劃作業</h2>
+            <p>嘉南四天三夜旅遊企劃試算表內容：</p>
             <div class="embed-wrapper">
                 <iframe src="https://docs.google.com/spreadsheets/d/12xOZfWy7ldSt7jFnzCCh8LKUDenRL_bhcDxyEzS4i9g/preview"></iframe>
             </div>
         </div>
 
         <div id="0316" class="section-box">
-            <h2 class="section-title">0316 旅遊規畫簡報</h2>
+            <h2 class="section-title">0316 旅遊規畫簡報作業</h2>
             <div class="embed-wrapper">
-                <iframe src="https://docs.google.com/presentation/d/1qv4ccJ5Is7mo8AQKFPR14nXZGvkE0ktgptC1TqjZ61w/embed?start=false&loop=false&delayms=3000"></iframe>
+                <iframe src="https://docs.google.com/presentation/d/1qv4ccJ5Is7mo8AQKFPR14nXZGvkE0ktgptC1TqjZ61w/embed"></iframe>
             </div>
         </div>
 
         <div id="0323" class="section-box">
-            <h2 class="section-title">0323 AI 應用作品 (PDF)</h2>
-            <p>Gamma 生成作品展示：</p>
+            <h2 class="section-title">0323 AI 簡報應用 (PDF 集)</h2>
+            
+            <h3>1. Notebook LM 內容</h3>
+            <div class="embed-wrapper">
+                <iframe src="https://drive.google.com/file/d/1hvSYL0B2wmgK8T8D-GM3mq6v_26v8wsI/preview"></iframe>
+            </div>
+
+            <h3>2. Manus 內容</h3>
+            <div class="embed-wrapper">
+                <iframe src="https://drive.google.com/file/d/1ZQx_lSaCnqjTJby8Yt0dG_RTvVT-HKyF/preview"></iframe>
+            </div>
+
+            <h3>3. Gamma 內容</h3>
             <div class="embed-wrapper">
                 <iframe src="https://drive.google.com/file/d/1O4b55k7oRKVg9Uql5QO0q2ys4-z_RTBh/preview"></iframe>
             </div>
         </div>
 
         <div id="0330" class="section-box">
-            <h2 class="section-title">0330 AI 旅遊影片</h2>
+            <h2 class="section-title">0330 AI 旅遊影片 (完整呈現)</h2>
+            
+            <h3>🎬 綜合完整版</h3>
             <div class="embed-wrapper">
                 <iframe src="https://drive.google.com/file/d/1kt1a4tMF4NnPvf311MxXHqb7DknpMP7m/preview"></iframe>
+            </div>
+
+            <div class="grid-2">
+                <div>
+                    <h4>Day 1 影片</h4>
+                    <div class="embed-wrapper" style="height: 300px;">
+                        <iframe src="https://drive.google.com/file/d/1xRp4DZe5eCqibbw07VXefHXZKj7x3p2P/preview"></iframe>
+                    </div>
+                </div>
+                <div>
+                    <h4>Day 2 影片</h4>
+                    <div class="embed-wrapper" style="height: 300px;">
+                        <iframe src="https://drive.google.com/file/d/154vWpceUZnA-l6R-tbdgm7GODkirx4nd/preview"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="0413" class="section-box">
-            <h2 class="section-title">0413 3D 公仔作品</h2>
-            <p>透過 Tripo3D 製作之模型預覽：</p>
-            <div class="embed-wrapper">
-                <iframe src="https://studio.tripo3d.ai/3d-model/4567815c-9ab9-40fc-8a44-f22ae8d4fbd6"></iframe>
+            <h2 class="section-title">0413 公仔作品</h2>
+            <div class="grid-2">
+                <div style="text-align: center; background: var(--light-blue); padding: 20px; border-radius: 10px;">
+                    <h4>個人公仔</h4>
+                    <a href="https://studio.tripo3d.ai/3d-model/4567815c-9ab9-40fc-8a44-f22ae8d4fbd6?invite_code=3ALFGC" class="btn" target="_blank">查看 3D 模型</a>
+                </div>
+                <div style="text-align: center; background: var(--light-blue); padding: 20px; border-radius: 10px;">
+                    <h4>雙人公仔</h4>
+                    <a href="https://studio.tripo3d.ai/3d-model/4c982881-dcfe-4098-8f4f-53d963b60116?invite_code=3ALFGC" class="btn" target="_blank">查看 3D 模型</a>
+                </div>
             </div>
         </div>
 
         <div class="section-box">
             <h2 class="section-title">自傳</h2>
-            <p>我的名字叫陳畹情，我於民國95年9月16日出生在高雄岡山。我從小就很喜歡海洋，對大海有著許多好奇心，選擇航海科是為了跳脫舒適圈到陌生的環境生活，讓自己的眼界可以更加寬廣。我認為我是個好奇心很強的人，希望未來我能帶著熱情與活力去追尋夢想與目標。</p>
+            <p>我於民國95年9月16日出生在高雄岡山。從小喜歡海洋，對大海充滿好奇，因此選擇高科大航海科。我是一個好奇心很強的人，喜歡挑戰自我，希望未來能帶著熱情追尋夢想。</p>
         </div>
 
     </div>
 
     <footer>
-        <p>與我聯絡 Tel: 0903557921</p>
         <p>&copy; 2026 陳畹情 (Panda). All Rights Reserved.</p>
     </footer>
 
