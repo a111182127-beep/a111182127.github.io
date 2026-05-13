@@ -22,7 +22,7 @@
         .section-title { color: var(--deep-ocean); border-bottom: 3px solid var(--wave-blue); padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; display: flex; align-items: center; }
         .section-title::before { content: '⚓'; margin-right: 10px; }
         
-        /* 詳細內容視窗 */
+        /* 內容顯示視窗 */
         .embed-wrapper { position: relative; width: 100%; height: 550px; background: #fff; border-radius: 10px; overflow: hidden; border: 2px solid var(--light-blue); margin: 15px 0; }
         .video-wrapper { position: relative; width: 100%; height: 400px; background: #000; border-radius: 10px; overflow: hidden; margin: 10px 0; }
         iframe { width: 100%; height: 100%; border: none; }
@@ -32,9 +32,10 @@
         
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .btn { display: inline-block; background: var(--wave-blue); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-top: 10px; transition: 0.3s; }
-        .btn:hover { background: var(--deep-ocean); }
-
+        
         h3 { color: var(--wave-blue); margin-top: 30px; border-left: 5px solid var(--wave-blue); padding-left: 10px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
         
         @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } .embed-wrapper, .video-wrapper { height: 300px; } }
     </style>
@@ -43,10 +44,12 @@
 
     <nav>
         <a href="#home">首頁</a>
+        <a href="#experience">旅遊與學歷</a>
+        <a href="#skills">專業技能</a>
         <a href="#0309">旅遊試算表</a>
         <a href="#0316">旅遊簡報</a>
-        <a href="#0323">AI 簡報(3份)</a>
-        <a href="#0330">AI 影片(5部)</a>
+        <a href="#0323">AI 簡報</a>
+        <a href="#0330">AI 影片</a>
         <a href="#0413">3D 公仔</a>
     </nav>
 
@@ -56,16 +59,55 @@
             <div class="profile-header">
                 <img src="IMG_2186.jpg" alt="陳畹情" class="profile-img">
                 <div class="profile-info">
-                    <h1>陳畹情 </h1>
+                    <h1>陳畹情</h1>
                     <h3>處女座｜B型｜2006-09-16</h3>
                     <p>📧 Email: A111182127@nkust.edu.tw<br>📞 Tel: 0903557921</p>
                 </div>
             </div>
         </div>
 
+        <div id="experience" class="section-box grid-2">
+            <div>
+                <h2 class="section-title">旅遊經驗</h2>
+                <ul>
+                    <li><strong>2025-07 新竹：</strong>風城風真的很大，城隍廟美食周邊小吃如貢丸、米粉超集中。科學園區是台灣半導體核心，東門城具備深厚歷史感。</li>
+                    <li><strong>2024-08 花蓮：</strong>太魯閣大理石峽谷景觀世界級，清水斷崖壯觀。必吃炸彈蔥油餅與麻糬，星空純淨無光害。</li>
+                    <li><strong>2019-07 嘉義：</strong>阿里山森林鐵路文化，火雞肉飯發源地，檜意森活村文青感濃厚，還有東石布袋海味。</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="section-title">學歷與語言</h2>
+                <p><strong>🎓 學歷：</strong><br>
+                2022-09 ~ 2027-06<br>
+                國立高雄科技大學 五專部 航海科</p>
+                <p><strong>🗣️ 語言能力：</strong><br>
+                中文 (母語)｜英文 (普通)｜台語 (普通)</p>
+            </div>
+        </div>
+
+        <div id="skills" class="section-box grid-2">
+            <div>
+                <h2 class="section-title">專業技能 & 證照</h2>
+                <p><strong>航海技能：</strong>六分儀觀測計算、海圖判判讀、航行計畫擬定</p>
+                <p><strong>專業證照：</strong>基本安全訓練證書（四小證）、保全職責、保全意識</p>
+                <p><strong>行政能力：</strong>資料整理、會議記錄、應對聯繫</p>
+            </div>
+            <div>
+                <h2 class="section-title">電腦技能</h2>
+                <p><strong>Office：</strong>Word、Excel (基本函數)、Powerpoint</p>
+                <p><strong>Workspace：</strong>Gmail、Meet、Google 系統</p>
+                <p><strong>應用軟體：</strong>Zuvio、YouTube、教學平台</p>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h2 class="section-title">自傳</h2>
+            <p>我的名字叫陳畹情，出生在高雄岡山。我從小就很喜歡海洋，選擇航海科是為了跳脫舒適圈到陌生的環境生活，讓自己的眼界可以更加寬廣。我是一個好奇心很強的人，這種力量可以支撐我繼續走下去。我希望未來能帶著熱情與活力去追尋夢想，做自己喜歡的事。</p>
+        </div>
+
         <div id="0309" class="section-box">
             <h2 class="section-title">0309 旅遊規劃作業</h2>
-            <p>嘉南四天三夜旅遊企劃 Google 試算表內容：</p>
+            <p>嘉南四天三夜旅遊企劃內容直接展示：</p>
             <div class="embed-wrapper">
                 <iframe src="https://docs.google.com/spreadsheets/d/12xOZfWy7ldSt7jFnzCCh8LKUDenRL_bhcDxyEzS4i9g/preview"></iframe>
             </div>
@@ -73,64 +115,30 @@
 
         <div id="0316" class="section-box">
             <h2 class="section-title">0316 旅遊規畫簡報作業</h2>
-            <p>嘉南平原四天三夜家庭旅遊簡報：</p>
             <div class="embed-wrapper">
                 <iframe src="https://docs.google.com/presentation/d/1qv4ccJ5Is7mo8AQKFPR14nXZGvkE0ktgptC1TqjZ61w/embed"></iframe>
             </div>
         </div>
 
         <div id="0323" class="section-box">
-            <h2 class="section-title">0323 AI 簡報應用</h2>
-            
-            <h3>1. Notebook LM</h3>
-            <div class="embed-wrapper">
-                <iframe src="https://drive.google.com/file/d/1hvSYL0B2wmgK8T8D-GM3mq6v_26v8wsI/preview"></iframe>
-            </div>
-
-            <h3>2. Manus AI</h3>
-            <div class="embed-wrapper">
-                <iframe src="https://drive.google.com/file/d/1ZQx_lSaCnqjTJby8Yt0dG_RTvVT-HKyF/preview"></iframe>
-            </div>
-
-            <h3>3. Gamma AI</h3>
-            <div class="embed-wrapper">
-                <iframe src="https://drive.google.com/file/d/1O4b55k7oRKVg9Uql5QO0q2ys4-z_RTBh/preview"></iframe>
-            </div>
+            <h2 class="section-title">0323 AI 簡報應用內容</h2>
+            <h3>Notebook LM</h3>
+            <div class="embed-wrapper"><iframe src="https://drive.google.com/file/d/1hvSYL0B2wmgK8T8D-GM3mq6v_26v8wsI/preview"></iframe></div>
+            <h3>Manus AI</h3>
+            <div class="embed-wrapper"><iframe src="https://drive.google.com/file/d/1ZQx_lSaCnqjTJby8Yt0dG_RTvVT-HKyF/preview"></iframe></div>
+            <h3>Gamma AI</h3>
+            <div class="embed-wrapper"><iframe src="https://drive.google.com/file/d/1O4b55k7oRKVg9Uql5QO0q2ys4-z_RTBh/preview"></iframe></div>
         </div>
 
         <div id="0330" class="section-box">
-            <h2 class="section-title">0330 AI 旅遊影片集</h2>
-            
-            <h3>🎬 完整綜合版影片</h3>
-            <div class="video-wrapper">
-                <iframe src="https://drive.google.com/file/d/1kt1a4tMF4NnPvf311MxXHqb7DknpMP7m/preview"></iframe>
-            </div>
-
+            <h2 class="section-title">0330 AI 旅遊影片全集</h2>
+            <h3>🎬 完整綜合版</h3>
+            <div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1kt1a4tMF4NnPvf311MxXHqb7DknpMP7m/preview"></iframe></div>
             <div class="grid-2">
-                <div>
-                    <h4>第一天 (Day 1)</h4>
-                    <div class="video-wrapper">
-                        <iframe src="https://drive.google.com/file/d/1xRp4DZe5eCqibbw07VXefHXZKj7x3p2P/preview"></iframe>
-                    </div>
-                </div>
-                <div>
-                    <h4>第二天 (Day 2)</h4>
-                    <div class="video-wrapper">
-                        <iframe src="https://drive.google.com/file/d/154vWpceUZnA-l6R-tbdgm7GODkirx4nd/preview"></iframe>
-                    </div>
-                </div>
-                <div>
-                    <h4>第三天 (Day 3)</h4>
-                    <div class="video-wrapper">
-                        <iframe src="https://drive.google.com/file/d/1vMtY82ohdFun8qo535uwd27DDzs2VU-b/preview"></iframe>
-                    </div>
-                </div>
-                <div>
-                    <h4>第四天 (Day 4)</h4>
-                    <div class="video-wrapper">
-                        <iframe src="https://drive.google.com/file/d/1SGz_nnbcPqSm0VhGGrJWVqaXff0Ws0zb/preview"></iframe>
-                    </div>
-                </div>
+                <div><h4>第一天 (Day 1)</h4><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1xRp4DZe5eCqibbw07VXefHXZKj7x3p2P/preview"></iframe></div></div>
+                <div><h4>第二天 (Day 2)</h4><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/154vWpceUZnA-l6R-tbdgm7GODkirx4nd/preview"></iframe></div></div>
+                <div><h4>第三天 (Day 3)</h4><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1vMtY82ohdFun8qo535uwd27DDzs2VU-b/preview"></iframe></div></div>
+                <div><h4>第四天 (Day 4)</h4><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1SGz_nnbcPqSm0VhGGrJWVqaXff0Ws0zb/preview"></iframe></div></div>
             </div>
         </div>
 
@@ -146,11 +154,6 @@
                     <a href="https://studio.tripo3d.ai/3d-model/4c982881-dcfe-4098-8f4f-53d963b60116?invite_code=3ALFGC" class="btn" target="_blank">查看 3D 模型</a>
                 </div>
             </div>
-        </div>
-
-        <div class="section-box">
-            <h2 class="section-title">自傳</h2>
-            <p>我的名字叫陳畹情，出生在高雄岡山。我從小就很喜歡海洋，選擇航海科是為了跳脫舒適圈到陌生的環境生活，讓自己的眼界可以更加寬廣。我是一個好奇心很強的人，這種力量可以支撐我繼續走下去。我希望未來能帶著熱情與活力去追尋夢想，做自己喜歡的事。</p>
         </div>
 
     </div>
